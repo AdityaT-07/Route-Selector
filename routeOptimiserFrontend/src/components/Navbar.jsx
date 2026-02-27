@@ -11,7 +11,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
               <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent
                 group-hover:from-pink-500 group-hover:to-cyan-400 transition-all duration-300">
-                Fusion Flow
+                RouteNova
               </span>
             </Link>
           </div>
