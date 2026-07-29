@@ -220,8 +220,11 @@ const scrollToForm = () => {
       finalCountry: finalCountry,
     };
 
+    const API = import.meta.env.VITE_API_URL;
+
+
     try {
-      const response = await fetch("http://localhost:5001/api/find-routes", {
+      const response = await fetch(`${API}/api/find-routes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataToSend),
