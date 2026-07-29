@@ -8,6 +8,7 @@ from src.utils.helpers import load_config
 import logging
 import pandas as pd
 from pathlib import Path
+import osimport os
 
 app = Flask(__name__)
 CORS(app)
@@ -176,5 +177,11 @@ def find_routes():
         logger.error(f"Error processing request: {str(e)}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
+# if __name__ == "__main__":
+#     app.run(debug=True, host="0.0.0.0", port=5001)
+
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5001))
+    )
