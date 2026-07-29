@@ -20,6 +20,13 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+@app.route("/")
+def home():
+    return jsonify({
+        "status": "Backend is running",
+        "service": "RouteNova API"
+    }), 200
+
 @app.route('/api/find-routes', methods=['POST'])
 def find_routes():
     try:
